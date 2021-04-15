@@ -1,8 +1,8 @@
 Origin: Sakey's Villa of Tweaks
-Label: <Your Repository’s Label >
+Label: The title says it all
 Suite: stable
-Version: 1.0
+Version: 0.0.1
 Codename: cydia-ios
 Architectures: iphoneos-arm
 Components: main
-Description: <Your Repo’s Display Name>
+Description: The Title says it all
