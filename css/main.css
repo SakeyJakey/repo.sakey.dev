@@ -1,0 +1,125 @@
+/* Main */
+
+*{
+    font-family: 'Montserrat', sans-serif;
+    user-select: none;
+    scrollbar-3dlight-color: #495464;
+    scrollbar-arrow-color: #BBBFCA;
+    scrollbar-track-color: #F4F4F2;
+    scroll-behavior: smooth;
+    margin: 0;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #495464;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #BBBFCA;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #F4F4F2;
+  }
+
+body{
+  overflow: hidden; 
+  background-color: #495464;
+}
+
+/* Nav */
+
+.nav{
+    padding: 2%;
+    display: inline;
+    font-size: xx-large;
+    transition: 0.5s ease-in-out;
+    color: #BBBFCA;
+}
+.nav:not(.nav-text):hover{
+    color: #FFFFFF;
+    transition: 0.3 ease-in-out;
+}
+.nav:not(.nav-text)::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #FFFFFF;
+    transition: width 0.5s ease-in-out;
+}
+.nav:not(.nav-text):hover::after{
+    width: 100%;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-container{
+    width: 100%;
+    padding: 1%;
+    padding-top:2.5%;
+    display: flex;
+    position: absolute;
+    background-color: rgba(73, 84, 100, 0.75);
+}
+
+.nav-text{
+  font-size: x-large;
+}
+
+/* Section and sections */
+
+.section{
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    padding: none;
+    margin: none;
+}
+
+.main{
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  padding: none;
+  margin: none;
+}
+
+/* Home */
+
+.home{
+  display: block;
+  align-items: center;  
+  justify-content: center;
+  text-align: center;
+  color:white;
+
+  background-image: url("../img/home-bg.jpg");
+  background-attachment: fixed;
+}
+.title{
+  font-size: 20vh;
+  margin-bottom: 3vh;
+  padding-top: 30vh;
+  animation: FadeAndFlyIn 2s ease-out;
+}
+ 
+.subtitle{
+  padding-top: none;
+  animation: FadeAndFlyIn 2s ease-out;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+}
+
+/* Animations */
+
+@keyframes FadeAndFlyIn{
+  from{transform: translateY(200px); opacity: 0%;}
+  to{transform: translateY(0px); opacity: 100%;}
+}
